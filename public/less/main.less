@@ -1,0 +1,216 @@
+// out:  ../css/main.css, sourcemap: true, compress: true
+
+@import "reset.less";
+
+@bodyColor: #f2f5f7;
+@navColor: white;
+@navHeight: 70px;
+@menuColor: #868f98;
+@navFontColor: #303b45;
+@slide-width: 600px;
+@inner-slide-height: 300px;
+@slider-height: 450px;
+@bodyFont: #738797;
+
+@slide1Color: #FF4136;
+@slide2Color: pink;
+@slide3Color: lightblue;
+@slide4Color: lightpink;
+@slide5Color: #2ECC40;
+
+p {white-space: normal;}
+small {font-size: 0.8em;}
+hr {width: 90%; background-color: rgba(0,0,0,0.1); height: 1px; float: left; margin-left: 5%;}
+body {background-color: @bodyColor; font-family: 'Lato'; color: @navFontColor;}
+.nav {background-color: @navColor; width: 100%; height: @navHeight; text-align: center;}
+.nav-title {font-size: 1.3em; text-align: center; line-height: @navHeight; font-weight: 400; margin: auto; display: inline-block; padding-right: 225px;}
+.nav-title span {font-weight: 300;}
+.menu {float: right; height: @navHeight; padding-top: 17.5px; box-sizing: border-box; color: @menuColor; margin-right: 50px; display: none;}
+.nav-ham {float: left; margin-top: 5px; cursor: pointer;}
+.menu p {float: right; margin-top: 5.5px; display: none;}
+.bar {width: 25px; height: 3px; background-color: @menuColor; margin: 4px 0;}
+input {float: left; border: none; background-color: @navColor; width: 150px; height: 30px; padding: 0; margin-top: 20px;}
+.input-icon {float: left; margin-top: 27px; margin-left: 50px; margin-right: 10px;}
+
+// Slider
+
+.slide-container {width: 100%;height: @slider-height; overflow: hidden; position: absolute; white-space: nowrap; margin: auto; z-index: -1; transition: 0.8s;}
+.arrow { position: relative; width: 50px; height: 50px; cursor: pointer; margin-top: 125px; transition: 0.8s;}
+.arrow-left {float: left; margin-left: 10px;}
+.arrow-right {float: right; margin-right: 10px;}
+.book-slider {width: 100%; height: 100%; position: relative; transition: 1s; left: 0; }
+.book-slide {width: @slide-width; height: 100%; box-sizing: border-box; display: inline-block; transition: 0.8s;}
+.book {width: 50%;float: left; text-align: center;position: relative; display: block; margin: 0 auto;}
+.book img {width: 80%; margin-top: 30px; box-shadow: 1px 5px 15px black;}
+.slide-body {width: 100%; height: @inner-slide-height; transition: 0.8s;}
+.book-details {width: 50%; box-sizing: border-box; float: right; text-align: left; padding-right: 25px; padding-top: 20px; color: white;}
+.book-details h3 {font-size: 1.3em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; transition: 0.8s;}
+.book-details small {float: left; transition: 0.8s;}
+.rating {float: left; width: 100%; margin-top: 10px; transition: 0.8s;}
+.rating small {height: 24px; line-height: 24px; margin-left: 20px; transition: 0.8s;}
+.stars {float: left;}
+.book-details p {float: left; line-height: 1.2em; margin-top: 20px; text-align: left;}
+.book-button {float: left; box-sizing: border-box; padding: 8px 10px; margin: auto; margin-top: 20px; box-shadow: 1px 10px 10px rgba(0,0,0,0.6); transition: 0.8s;
+  width: 80%; margin-left: 10%; border-radius: 50px; font-weight: bold; text-decoration: none; background-color: @bodyColor; transition: 0.8s; text-align: center;}
+
+.book-slide:nth-of-type(1) .slide-body {background-color: @slide1Color;}
+.book-slide:nth-of-type(1) .book-button {color: @slide1Color / 2;}
+.book-slide:nth-of-type(1) .stars {color: @slide1Color / 2;}
+
+.book-slide:nth-of-type(2) .slide-body {background-color: @slide2Color;}
+.book-slide:nth-of-type(2) .book-button {color: @slide2Color / 2;}
+.book-slide:nth-of-type(2) .stars {color: @slide2Color / 2;}
+
+.book-slide:nth-of-type(3) .slide-body {background-color: @slide3Color;}
+.book-slide:nth-of-type(3) .book-button {color: @slide3Color / 2;}
+.book-slide:nth-of-type(3) .stars {color: @slide3Color / 2;}
+
+.book-slide:nth-of-type(4) .slide-body {background-color: @slide4Color;}
+.book-slide:nth-of-type(4) .book-button {color: @slide4Color / 2;}
+.book-slide:nth-of-type(4) .stars {color: @slide4Color / 2;}
+
+.book-slide:nth-of-type(5) .slide-body {background-color: @slide5Color;}
+.book-slide:nth-of-type(5) .book-button {color: @slide5Color / 2;}
+.book-slide:nth-of-type(5) .stars {color: @slide5Color / 2;}
+
+// Sidebar
+.sidebar {width: 25%; float: left; padding-right: 50px; box-sizing: border-box; transition: 1s; overflow: hidden;}
+.sidebar p {font-size: 0.9em; line-height: 30px;}
+.content-container {margin-top: 500px; padding-right: 50px; padding-left: 50px; width: 100%; box-sizing: border-box;}
+.content-container h3 {font-size: 1.2em; font-weight: 400;}
+.sidebar h3 {clear: both; margin-bottom: 20px;}
+.best-authors {width: 100%;}
+.author {width: 100%; margin: 10px 0;}
+.avatar {width: 30px; height: 30px; float: left; margin-right: 10px;}
+.avatar img {width: 100%; margin: 0 auto; border-radius: 100%; box-shadow: 1px 5px 10px rgba(0,0,0,0.5);}
+
+.best-books {margin-top: 80px;}
+.books {}
+.s-book {width: 100%; margin: 10px 0; height: auto; float: left;}
+.book-thumbnail {width: 20%; float: left;}
+.book-thumbnail img {width: 70%; box-shadow: 1px 5px 10px rgba(0,0,0,0.5);}
+.sbook-details {width: 80%; float: left;}
+.sbook-title p {line-height: 20px;}
+
+.menu-list {list-style: none; float: right; transition: 0.8s;}
+.list-item {float: left; padding: 0 5px; cursor: pointer;}
+.list-item:last-of-type {padding-right: 0;}
+.main-content {width: 75%; float: right; transition: 1s;}
+.content-menu {width: 100%; float: left; max-width: 1500px; transition: 0.8s;}
+.content-menu h3 {float: left;}
+.content-body {width: 100%; margin-top: 70px; display: inline-block; transition: 0.8s;}
+.content-row {width: 100%; height: auto; float: left; margin-bottom: 80px; transition: 0.8s;}
+.content-book {width: 47.5%; float: left; margin-top: 20px; max-width: 600px; transition: 0.8s;
+  background-color: @navColor; box-shadow: 1px 1px 10px black; border-radius: 2px;}
+.content-book:first-of-type {margin-right: 2.5%;}
+.content-book:last-of-type {margin-left: 2.5%;}
+.content-top {width: 100%; padding-left: 20px; box-sizing: border-box; padding-right: 20px;}
+.content-details {width: 60%;float: right; min-height: 245px; transition: 0.8s;}
+.content-details small {color: @bodyFont}
+.content-details .rating {width: auto; float: none; color: @bodyFont}
+.content-details .stars {color: #ff9700;}
+.content-details h4 {margin-top: 20px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.content-details p {margin-bottom: 20px; color: @bodyFont; font-size: 0.9em;}
+.content-cover {width: 40%; float: left; transition: 0.8s;}
+.content-cover img {width: 80%;top: -30px; position: relative; box-shadow: 1px 5px 10px rgba(0,0,0,0.5); transition: 0.8s;}
+.content-bottom {width: 100%; height: 50px; float: left;}
+.liked-avatar {width: 25px; height: 25px; float: left; margin-top: 12.5px; margin-right: 10px;}
+.liked-avatar img {width: 100%; border-radius: 100%; }
+.content-bottom p {line-height: 50px; font-size: 0.8em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+
+.active-menu {border-bottom: 1px solid green; transition: 0.5s;}
+
+@media screen and (max-width: 1000px) {
+  // Slider
+  @slide-width: 500px;
+  @slider-height: 400px;
+  @inner-slide-height: 280px;
+
+  .slide-container {height: @slider-height;}
+  .arrow {width: 50px; height: 50px; margin-top: 115px;}
+  .book-slide {width: @slide-width;}
+  .book img {width: 80%; margin-top: 30px; }
+  .slide-body {width: 100%; height: 280px;}
+  .book-details p {float: left; line-height: 1.2em; margin-top: 20px; text-align: left;}
+
+  // Sidebar
+  .content-container {margin-top: 400px;}
+  .sidebar {width: 0px; padding-right: 0px;}
+
+// Book Display
+  .main-content {width: 100%;}
+  .content-details .rating small {clear: both; display: block; margin-left: 0px;}
+
+
+}
+
+@media screen and (max-width: 750px) {
+  // Slider
+  @slide-width: 400px;
+  @slider-height: 350px;
+  @inner-slide-height: 250px;
+
+  .slide-container {height: @slider-height;}
+  .arrow {margin-top: 100px; }
+  .book-slide {width: @slide-width;}
+  .slide-body {height: @inner-slide-height;}
+  .book-details h3 {font-size: 1.1em;}
+  .rating small {margin-left: 0px;}
+  .book-details p {display: none;}
+  .book-button {padding: 8px 10px; margin-top: 30px; width: 80%; margin-left: 10%;}
+
+  .content-container {margin-top: 350px;}
+
+  // main body
+  .menu-list {clear: both; float: left;}
+  .list-item:last-of-type {padding-right: 5px;}
+  .content-row {margin-bottom: 0px;}
+  .content-row:last-of-type {margin-bottom: 70px;}
+  .content-book {width: 100%; float: none; margin: auto; max-width: 100%; margin-bottom: 50px; display: flex;}
+  .content-book:first-of-type {margin-right: 0%;}
+  .content-book:last-of-type {margin-left: 0%;}
+  .content-details {width: 50%;}
+  .content-cover {width: 50%;}
+
+  .active-menu {background-color: green; border-radius: 5px; color: white; border-bottom: none;}
+}
+
+@media screen and (max-width: 600px) {
+  .list-item {font-size: 0.9em;}
+}
+
+@media screen and (max-width: 580px){
+  .nav-title {float: right; padding-right: 50px;}
+}
+
+@media screen and (max-width: 550px) {
+  .menu-list span {clear: both; display: block;}
+  .list-item {margin: 5px auto;}
+}
+
+@media screen and (max-width: 500px) {
+  // Slider
+  @slide-width: 300px;
+  @slider-height: 250px;
+  @inner-slide-height: 150px;
+
+  .slide-container {height: @slider-height;}
+  .arrow {margin-top: 50px; }
+  .book-slide {width: @slide-width;}
+  .slide-body {height: @inner-slide-height;}
+  .book-details h3 {font-size: 1em;}
+  .book-details .rating {display: none;}
+  input {width: 100px; }
+
+  .book-button {padding: 8px 10px; margin-top: 30px; width: 80%; margin-left: 10%; overflow: hidden;  white-space: nowrap; text-overflow: ellipsis;}
+
+  .content-top {text-align: center;}
+  .content-cover {width: 100%; margin: auto;}
+  .content-details {width: 100%; float: left; text-align: left;}
+}
+
+@media screen and (max-width: 350px) {
+  input {padding-left: 50px;}
+  .input-icon {display: none;}
+  .nav .fa {display: none;}
+}
